@@ -4,12 +4,15 @@ var http = require('http');
 // Create a server and supply it with a function to handle requests
 http.createServer(function(request, response) {
 
+  // Log that we received a request
+  console.log('We received a request!');
+
   // Write the HTTP header that tells the browser we're sending plain text
   response.writeHead(200, {"Content-Type": "text/plain"});
 
   // Write 'Hello world!' to the response
   response.write('Hello world!');
-  
+
   // End the response
   response.end();
 
