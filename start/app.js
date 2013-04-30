@@ -19,8 +19,8 @@ app.configure(function(){
   // Set the directory to get the views to be /views
   app.set('views', __dirname + '/views');
 
-  // Use the 'ejs' view engine
-  app.set('view engine', 'ejs');
+  // Use the 'hbs' view engine
+  app.set('view engine', 'hbs');
 
   // Use the express development style logging
   app.use(express.logger('dev'));
@@ -37,10 +37,8 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-// Defines a route of '/' to return hello world!
-app.get('/', function(req, res) {
-  res.send('Hello world!');
-});
+// Routes here!
+
 
 // Creates the server on the port set previously and
 // logs when it starts
