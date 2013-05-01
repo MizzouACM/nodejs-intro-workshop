@@ -18,6 +18,13 @@ module.exports = {
 
   getNote: function(id) {
     return notes[id];
+  },
+
+  updateNote: function(id, title, content) {
+    if (notes[id]) {
+      notes[id].title = title;
+      notes[id].content = content;
+    }
   }
 
 };
