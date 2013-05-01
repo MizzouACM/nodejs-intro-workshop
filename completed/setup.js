@@ -3,6 +3,7 @@ var express = require('express')
   , path = require('path');
 
 
+// Export this function as the module
 module.exports = function(app) {
 
 
