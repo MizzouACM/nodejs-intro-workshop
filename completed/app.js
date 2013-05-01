@@ -38,7 +38,24 @@ app.configure('development', function(){
 });
 
 // Routes here!
+app.get('/', function(req, res) {
+  var notes = db.getNotes();
+  res.render('index', {notes: notes});
+});
 
+app.get('/new', function(req, res) {
+  res.render('new');
+});
+
+app.post('/create', function(req, res) {
+  db.addNote(req.body.title, req.body.content);
+  res.redirect('/');
+});
+
+app.get('/note/:id', function(req,res) {
+  var note = db.getNote(req.params.id)
+  res.render('note', {note: note});
+});
 
 // Creates the server on the port set previously and
 // logs when it starts

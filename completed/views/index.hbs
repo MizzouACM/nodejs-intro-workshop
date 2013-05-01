@@ -1,0 +1,20 @@
+<html>
+<head>
+  <title>Awesome site!</title>
+</head>
+<body>
+  <h1>Awesome site!</h1>
+  <ul>
+    {{#notes}}
+      <li>
+        <a href="/note/{{id}}">
+          {{title}}
+        </a>
+      </li>
+    {{/notes}}
+  </ul>
+
+  <a href="/new">Create a note!</a>
+
+</body>
+</html>

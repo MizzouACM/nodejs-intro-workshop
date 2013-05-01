@@ -1,23 +1,23 @@
-// Fake in memory database that will allow creating and retrieving posts
+// Fake in memory database that will allow creating and retrieving notes
 
-var posts = [];
+var notes = [];
 
 module.exports = {
 
-  addPost: function(title, content) {
-    posts.push({
-      id: posts.length,
+  addNote: function(title, content) {
+    notes.push({
+      id: notes.length,
       title: title,
       content: content
     });
   },
 
-  getPosts: function() {
-    return posts;
+  getNotes: function() {
+    return notes;
   },
 
-  getPost: function(id) {
-    return posts[id];
+  getNote: function(id) {
+    return notes[id];
   }
 
 };
